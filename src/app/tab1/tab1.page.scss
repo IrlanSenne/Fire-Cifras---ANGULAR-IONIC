@@ -1,0 +1,45 @@
+ion-content.background{
+    --background: url(../../assets/img/violao2.jpeg) 0 0/100% 100% no-repeat;
+      background-attachment: fixed;
+}
+
+.marg{
+    color: red
+}
+.titulo{
+    opacity: 0.5;
+}
+h1, h6{
+    color: rgba(247, 234, 234, 0.5);
+    font-family: 'Amatic SC', cursive;
+    letter-spacing: 2px;
+    text-align: center;
+}
+h1{
+    margin-top: 30px;
+}
+ion-searchbar{
+    margin-top: 90px;
+    color:white;
+    border: 1px solid #fff;
+}
+p{
+    color:rgba(243, 226, 226, 0.7);
+    font-family: 'Pangolin', cursive;
+    text-align: center;
+}
+a{
+    background-color: rgba(255, 136, 0, 0.5);
+    color: #f7f3f3;
+    border-radius: 5px;  
+    font-family: 'Pangolin', cursive;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+.bandaLabel{
+    color : rgb(241, 100, 44);
+    font-family: 'Pangolin', cursive;
+  }
+  ion-list{
+    --ion-background-color: #0a04014f !important;
+  }

@@ -1,17 +1,18 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="background" [fullscreen]="true">
+ 
+<h1>"Tudo quanto tem fôlego louve ao Senhor. Louvai ao Senhor"</h1>
+<h6>- Salmos xxx</h6>
+<ion-searchbar  placeholder="" animated  (ionChange)="getItems($event)"></ion-searchbar>
+<ion-list *ngIf="!mostra">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-item  *ngFor="let item of bandas_list |  filtro: textoBuscar">
+    <ion-label ><a [routerLink]="['/cifra', item.banda, item.id ]"> <strong class="nomes"> {{ item.titulo }}</strong></a>
+     <br> <strong class="bandaLabel">({{ item.banda  }})</strong>
+    </ion-label>  
+  </ion-item>       
+  
+</ion-list>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<p *ngIf="mostra">Digite um trecho ou o titulo da música</p>
+
 </ion-content>

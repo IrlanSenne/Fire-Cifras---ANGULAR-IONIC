@@ -1,0 +1,30 @@
+<h1>{{titulo}}</h1>
+<ion-searchbar placeholder="Titulo , Trecho ..." animated (ionChange)="getItems($event)"></ion-searchbar>
+<ion-content>
+ 
+  <ion-list >
+    <ion-item  *ngFor="let item of bandas | filtro: textoBuscar; let i = index">
+     <model-cifra  [item]="item"></model-cifra>
+    </ion-item>          
+  </ion-list>
+  
+   
+      <div *ngIf="mostra" class="ion-text-center">
+        <ion-spinner id="spiner" name="dots"></ion-spinner>
+       </div>      
+  
+      <!-- SKELETON-->
+      <div *ngIf="mostra">         
+        <ion-list>           
+           <ion-label *ngFor="let i of [1,1,1,1,1,1,1,1,1,1,1,1]">
+              <ion-item>           
+                <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>             
+              </ion-item>
+           <ion-item>           
+            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>                
+          </ion-item>
+           </ion-label>         
+        </ion-list>
+      </div>
+           
+</ion-content>

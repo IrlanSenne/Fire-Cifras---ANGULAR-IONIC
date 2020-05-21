@@ -1,0 +1,35 @@
+.tamanho{
+    height: 100%;
+}
+h1{
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: 2.8px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-size: large;
+    letter-spacing: 2.8px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.welcome{
+    line-height: 50px;
+    letter-spacing: 4px;
+}
+
+    #slide1, #slide2, #slide3{
+        background: -webkit-linear-gradient(59deg, #FBB33F, #D53D0C);
+        background: linear-gradient(59deg, #FBB33F, #D53D0C);
+        font-family: 'Pangolin', cursive;
+    }
+ion-icon{
+    font-size: 150px;
+}
+ion-spinner{
+    color: white;
+}
+ion-progress-bar{
+    --progress-background: white
+}

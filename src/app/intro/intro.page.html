@@ -1,0 +1,20 @@
+<ion-content [fullscreen]="true">
+  <ion-slides  class="tamanho" pager="true"  [options]="slideOpts">  
+
+   <ion-slide id="slide1">  
+       <h1 class="welcome">Bem vindo(a) <br> ao <br> <strong>FIRE Cifras !</strong></h1>    
+   </ion-slide>
+
+   <ion-slide id="slide2"> 
+        <h1 class="welcome">Só louvores... <br> Sem mistura de música secular. <br> Imersão total !</h1>
+   </ion-slide>
+
+  <ion-slide id="slide3">
+       <a (click)="spiner()" routerLink="/tabs"><ion-icon name="arrow-redo-outline"></ion-icon>
+       <br> 
+       <ion-progress-bar color="light" *ngIf="!mostra" color="danger" type="indeterminate"></ion-progress-bar> <br> <span *ngIf="mostra"> Começar</span></a>
+      
+   </ion-slide>
+
+ </ion-slides>
+</ion-content>

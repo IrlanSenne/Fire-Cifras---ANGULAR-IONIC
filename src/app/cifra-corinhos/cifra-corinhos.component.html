@@ -1,0 +1,30 @@
+<ion-content  class="ion-padding" >
+  <div class="content1">
+<h3>{{ titulo }}</h3>
+<h5>{{ banda }}</h5>
+<!-- Colocar um sinal de " + " em cada nota para aumentar meio tom quando acionado no tom-->
+
+<!-- =========== TOM =====================-->
+<ion-list>
+  <ion-item>
+    <ion-label *ngIf="mostra">{{original}}</ion-label>
+    <ion-select [disabled]="!info" (ionChange)="trocaCifra($event)" interface="popover">
+        <ion-select-option *ngFor="let t of ts" >{{t}}</ion-select-option>      
+    </ion-select>
+  </ion-item>
+</ion-list>
+<div *ngIf="!info" class="alertaTom">O tom dessa música ainda não pode ser alterado</div>
+<br>
+<ion-button  size="small" color="danger" (click)="diminuiFont()"><ion-icon size="small" name="remove-outline"></ion-icon></ion-button>
+<ion-text color="dark" class="ion-margin ">Fonte</ion-text>
+<ion-button  size="small" color="danger" (click)="aumentaFont()"><ion-icon size="small" name="add-outline"></ion-icon></ion-button>
+
+</div><br>
+<!-- =========== Música ====================-->
+
+ 
+
+    <pre #cifraTop [innerHTML]="musicaAlterada"></pre>
+
+</ion-content>
+
